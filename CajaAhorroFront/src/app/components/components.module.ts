@@ -8,6 +8,7 @@ import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { CrearpersonaComponent } from './crearpersona/crearpersona.component';
+import { CrearclienteComponent } from './crearcliente/crearcliente.component';
 
 @NgModule({
   imports: [
@@ -20,7 +21,8 @@ import { CrearpersonaComponent } from './crearpersona/crearpersona.component';
     FooterComponent,
     NavbarComponent,
     SidebarComponent,
-    CrearpersonaComponent
+    CrearpersonaComponent,
+    CrearclienteComponent
   ],
   exports: [
     FooterComponent,
