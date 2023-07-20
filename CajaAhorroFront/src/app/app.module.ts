@@ -12,7 +12,7 @@ import { ComponentsModule } from './components/components.module';
 import { AppComponent } from './app.component';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
-import { CrearclienteComponent } from './crearcliente/crearcliente.component';
+
 
 @NgModule({
   imports: [
@@ -27,8 +27,8 @@ import { CrearclienteComponent } from './crearcliente/crearcliente.component';
   ],
   declarations: [
     AppComponent,
-    AdminLayoutComponent,
-    CrearclienteComponent
+    AdminLayoutComponent
+   
 
   ],
   providers: [],
