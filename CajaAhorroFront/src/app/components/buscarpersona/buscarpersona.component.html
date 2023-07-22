@@ -27,13 +27,13 @@
               <div class="col-md-6 pr-1">
                 <div class="form-group">
                   <label>Nombre</label>
-                  <input type="text" class="form-control" placeholder="Nombre" [(ngModel)]="nombre">
+                  <input  name="nombre" id="nombre"type="text" class="form-control" placeholder="Nombre" [(ngModel)]="persona.nombre">
                 </div>
               </div>
               <div class="col-md-6 pl-1">
                 <div class="form-group">
                   <label>Apellido</label>
-                  <input type="text" class="form-control" placeholder="Apellido" [(ngModel)]="apellido">
+                  <input  name="apellido" id="apellido" type="text" class="form-control" placeholder="Apellido" [(ngModel)]="persona.apellido">
                 </div>
               </div>
             </div>
@@ -41,7 +41,7 @@
               <div class="col-md-12">
                 <div class="form-group">
                   <label>Direccion</label>
-                  <input type="text" class="form-control" placeholder="Direccion" [(ngModel)]="persona.direccion">
+                  <input  name="direccion" id="direccion"type="text" class="form-control" placeholder="Direccion" [(ngModel)]="persona.direccion">
                 </div>
               </div>
             </div>
@@ -49,13 +49,16 @@
               <div class="col-md-4 pr-1">
                 <div class="form-group">
                   <label>Telefono</label>
-                  <input type="number" class="form-control" placeholder="Telefono" [(ngModel)]="persona.telefono">
+                  <input  name="telefono" id="telefono" type="number" class="form-control" placeholder="Telefono" [(ngModel)]="persona.telefono">
                 </div>
               </div>
             </div>
           </form>
-          <div style="margin-left: 50%;">
+          <div style="margin-left: 30%;">
             <button type="button" class="btn btn-info" (click)="buscarpersona()">Buscar</button>
+          </div>
+          <div style="margin-left: 40%;">
+            <button type="button" class="btn btn-info" (click)="editarpersona()">Editar</button>
           </div>
         </div>
       </div>

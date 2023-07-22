@@ -30,10 +30,16 @@ export class BuscarpersonaComponent implements OnInit {
     this.http.get('http://localhost:8080/obtenerPersona/' + this.cedula  ).subscribe((data:any) => 
     {console.log(data)
       this.persona=data 
-    
+      const nombres=this.persona.nombre.split(' ')
+    this.persona.nombre=nombres[0]
+    this.persona.apellido=nombres[1]
 });
 
   }
 
+  editarpersona(){
+    this.http.post('http://localhost:8080/editarPersona', this.persona).subscribe((data:any)=>
+    {console.log(data)});
+  }
 
 }
