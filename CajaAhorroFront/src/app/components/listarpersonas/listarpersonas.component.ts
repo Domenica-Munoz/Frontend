@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
 @Component({
-  selector: 'app-crearpersona',
-  templateUrl: './crearpersona.component.html',
-  styleUrls: ['./crearpersona.component.css']
+  selector: 'app-listarpersonas',
+  templateUrl: './listarpersonas.component.html',
+  styleUrls: ['./listarpersonas.component.css']
 })
-export class CrearpersonaComponent implements OnInit {
 
+export class ListarpersonasComponent implements OnInit {
+ listapersona: any;
   nombre1: string;
   apellido: string;
   correo: string;
@@ -16,14 +16,19 @@ export class CrearpersonaComponent implements OnInit {
   direccion: string;
   telefono: string;
   nombre: string;
+ 
+    
+  
+
 
   constructor(private http: HttpClient) { }
+ 
 
   ngOnInit(): void {
+ this.listaper();
   }
 
-  crear() {
-   
+  listaper(){
     const persona = {
       nombre: this.nombre1 + ' ' + this.apellido,
       apellido: this.apellido,
@@ -33,16 +38,13 @@ export class CrearpersonaComponent implements OnInit {
       direccion: this.direccion,
       telefono: this.telefono
     };
-    
-    this.http.post('http://localhost:8080/crearPersona', persona).subscribe((data: any) => {
+   
+
+    this.http.get('http://localhost:8080/listarPersonas').subscribe((data: any) => {
       console.log(data);
+      this.listapersona=data;
     }, error => {
       console.error(error);
     });
-
-    
-  }
- 
- 
-
+}
 }

@@ -1,0 +1,49 @@
+<div class="container">
+    <div>
+     <div style="margin-left: 50px; margin-block-start: 20px; margin-right:150px;">
+          <table class="table table-bordered border-primary">
+              <thead class="table-light">
+                  <th>
+                    <p class="h3">Nombres</p>
+                  </th>
+                  <th>
+                    <p class="h3">Correo</p>
+                  </th>
+                  <th>
+                     <p class="h3">Cedula</p>
+                   </th>
+                   <th>
+                     <p class="h3">Direccion</p>
+                   </th>
+                   <th>
+                    <p class="h3">Telefono</p>
+                  </th>
+                    
+              </thead>
+         
+                       <tbody>
+                        <tr *ngFor="let res of listapersona">
+                             <td>
+                                  <p class="h5">{{res.nombre}}</p>
+                             </td>
+                             <td>
+                                  <p class="h5">{{res.correo}}</p>
+                             </td>
+                             <td>
+                              <p class="h5">{{res.cedula}}</p>
+                               </td>
+                             <td>
+                              <p class ="h5">{{res.direccion}}</p>
+                             </td>
+                             <td>
+                              <p class ="h5">{{res.telefono}}</p>
+                             </td>
+                        </tr>
+
+                       </tbody>
+                   
+           
+         
+   
+
+

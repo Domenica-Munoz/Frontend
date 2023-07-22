@@ -9,6 +9,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { CrearpersonaComponent } from './crearpersona/crearpersona.component';
 import { CrearclienteComponent } from './crearcliente/crearcliente.component';
+import { ListarpersonasComponent } from './listarpersonas/listarpersonas.component';
+import { ListarclientesComponent } from './listarclientes/listarclientes.component';
+import { BuscarpersonaComponent } from './buscarpersona/buscarpersona.component';
 
 @NgModule({
   imports: [
@@ -22,13 +25,17 @@ import { CrearclienteComponent } from './crearcliente/crearcliente.component';
     NavbarComponent,
     SidebarComponent,
     CrearpersonaComponent,
-    CrearclienteComponent
+    CrearclienteComponent,
+    ListarpersonasComponent,
+    ListarclientesComponent,
+    BuscarpersonaComponent
   ],
   exports: [
     FooterComponent,
     NavbarComponent,
     SidebarComponent,
-    CrearpersonaComponent
+    CrearpersonaComponent,
+    CrearclienteComponent
   ]
 })
 export class ComponentsModule { }
