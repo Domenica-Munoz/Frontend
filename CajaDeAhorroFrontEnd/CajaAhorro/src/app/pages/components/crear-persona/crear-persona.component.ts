@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-crear-persona',
@@ -10,13 +11,14 @@ export class CrearPersonaComponent {
 
   validationForm: FormGroup;
 
-  constructor() {
+  constructor(private http: HttpClient) {
     this.validationForm = new FormGroup({
-      Cedula: new FormControl(null,[ Validators.required, Validators.minLength(10), Validators.maxLength(10)]),
-      Nombre: new FormControl(null, [Validators.required]),
-      Correo: new FormControl(null, [Validators.required]),
-      Direccion: new FormControl(null, [Validators.required]),
-      Telefono: new FormControl(null, [Validators.required]),
+      cedula: new FormControl(null,[ Validators.required, Validators.minLength(10), Validators.maxLength(10)]),
+      nombre: new FormControl(null, [Validators.required]),
+      correo: new FormControl(null, [Validators.required]),
+      direccion: new FormControl(null, [Validators.required]),
+      telefono: new FormControl(null, [Validators.required]),
+      password: new FormControl(null, [Validators.required]),
     });
    }
 
@@ -32,8 +34,15 @@ export class CrearPersonaComponent {
 
     if (this.validationForm.valid) {
       //Aqui debe consumirse el servicio de la api para crear la persona, lo dejo implementado para que se vea el formulario
+      const persona = this.validationForm.value ;
+      console.log(persona);
+      this.http.post('http://localhost:8080/crearPersona', persona).subscribe((data: any) => {
+        console.log(data);
+      }, error => {
+        console.error(error);
+      });
       console.log("Formulario valido");
-      console.log(this.validationForm.value);
+      
     }
   }
 }
