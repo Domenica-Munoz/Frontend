@@ -14,11 +14,13 @@ import { CrearPersonaComponent } from './pages/components/crear-persona/crear-pe
 import { SidebarModule } from './pages/shared/sidebar/sidebar.module';
 import { ReactiveFormsModule } from '@angular/forms';
 
+
 registerLocaleData(en);
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+   
   ],
   exports: [],
   imports: [

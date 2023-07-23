@@ -1,0 +1,43 @@
+<div class="justify-center items-center" style="margin-top: 10%; margin-left: 20%;">
+    <form nz-form>
+      <nz-form-item>
+        <nz-form-label [nzSm]="8" [nzXs]="24" nzRequired nzFor="correo">Correo</nz-form-label>
+        <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="El correo ingresado no es correcto">
+          <input id="Correo" name="Correo" [(ngModel)]="cliente.persona.correo" />
+        </nz-form-control>
+      </nz-form-item>
+
+      <nz-form-item>
+        <nz-form-label [nzSm]="8" [nzXs]="24" nzRequired nzFor="cedula">Cédula</nz-form-label>
+        <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="La cédula ingresada no es válida">
+          <input id="Cedula" name="Cedula" [(ngModel)]="cedula">
+        </nz-form-control>
+      </nz-form-item>
+        
+      <nz-form-item>
+        <nz-form-label [nzSm]="8" [nzXs]="24" nzRequired nzFor="nombre">Nombre</nz-form-label>
+        <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="El campo está incompleto">
+          <input name="Nombre" id="Nombre" [(ngModel)]="cliente.persona.nombre"/>
+        </nz-form-control>
+      </nz-form-item>
+
+      <nz-form-item>
+        <nz-form-label [nzSm]="8" [nzXs]="24" nzRequired nzFor="telefono">Teléfono</nz-form-label>
+        <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="El campo está incompleto">
+          <input name="Telefono" id="Telefono" [(ngModel)]="cliente.persona.telefono"/>
+        </nz-form-control>
+      </nz-form-item>
+
+      <nz-form-item>
+        <nz-form-label [nzSm]="8" [nzXs]="24" nzRequired nzFor="ingresos">Ingresos</nz-form-label>
+        <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="El campo está incompleto">
+          <input name="ingresos" id="ingresos" [(ngModel)]="cliente.ingresos"/>
+        </nz-form-control>
+      </nz-form-item>
+
+      </form>
+</div>
+<div style="display: inline-block;display: flex;">
+  <button nz-button nzType="primary" (click)="buscarCliente()" style="margin-left: 42%;margin-right: 5px;">Buscar cliente</button>
+  <button nz-button nzType="primary" (click)="editarCliente()" style="margin-right: 5px;">Editar cliente</button>
+</div>

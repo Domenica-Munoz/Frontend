@@ -28,7 +28,7 @@ export class ListarPersonaComponent{
 
   listaper(){
     const persona = {
-      nombre: this.nombre1 + ' ' + this.apellido,
+      nombre: this.nombre1,
       apellido: this.apellido,
       correo: this.correo,
       password: this.password,

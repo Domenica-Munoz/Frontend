@@ -1,0 +1,34 @@
+<nz-table>
+  <thead>
+      <tr>
+          <th>
+            <p class="h3">Nombres</p>
+          </th>
+          <th>
+            <p class="h3">Cedula</p>
+          </th>
+          <th>
+            <p class="h3">Telefono</p>
+          </th>
+          <th>
+            <p class="h3">Ingresos</p>
+          </th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let res of listaClientes">
+      <td>
+          <p class="h5">{{res.persona.nombre}}</p>
+      </td>
+      <td>
+          <p class="h5">{{res.persona.cedula}}</p>
+      </td>
+      <td>
+      <p class="h5">{{res.persona.telefono}}</p>
+          </td>
+      <td>
+      <p class ="h5">{{res.ingresos}}</p>
+      </td>
+      </tr>
+  </tbody>
+  </nz-table>

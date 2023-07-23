@@ -11,6 +11,15 @@ const routes: Routes = [
   },
   {
     path: 'persona/buscarActualizar', loadChildren:() => import('../app/pages/components/buscar-persona/buscar-persona.module').then(m => m.BuscarPersonaModule)
+  },
+  {
+    path: 'cliente/crear', loadChildren:() => import('../app/pages/components/crear-cliente/crear-cliente.module').then(m => m.CrearClienteModule)
+  },
+  {
+    path: 'cliente/listar', loadChildren:() => import('../app/pages/components/listar-cliente/listar-cliente.module').then(m => m.ListarClienteModule)
+  },
+  {
+    path: 'cliente/buscar', loadChildren:() => import('../app/pages/components/buscar-cliente/buscar-cliente.module').then(m => m.BuscarClienteModule)
   }
 ];
 
