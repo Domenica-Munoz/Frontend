@@ -1,0 +1,44 @@
+<div class=" w-full h-full flex flex-no-wrap justify-center items-center">
+    <form nz-form [formGroup]="validationForm" (ngSubmit)="submitForm()">
+      <nz-form-item>
+        <nz-form-label [nzSm]="8" [nzXs]="24" nzRequired nzFor="Correo">Correo</nz-form-label>
+        <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="El correo ingresado no es correcto">
+          <input nz-input formControlName="Correo" id="Correo" />
+        </nz-form-control>
+      </nz-form-item>
+
+      <nz-form-item>
+        <nz-form-label [nzSm]="8" [nzXs]="24" nzRequired nzFor="Cedula">Cédula</nz-form-label>
+        <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="La cédula ingresada no es válida">
+          <input nz-input formControlName="Cedula" id="Cedula" />
+        </nz-form-control>
+      </nz-form-item>
+        
+      <nz-form-item>
+        <nz-form-label [nzSm]="8" [nzXs]="24" nzRequired nzFor="Nombre">Nombre</nz-form-label>
+        <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="El campo está incompleto">
+          <input nz-input formControlName="Nombre" id="Nombre" />
+        </nz-form-control>
+      </nz-form-item>
+
+      <nz-form-item>
+        <nz-form-label [nzSm]="8" [nzXs]="24" nzRequired nzFor="Direccion">Dirección</nz-form-label>
+        <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="El campo está incompleto">
+          <input nz-input formControlName="Direccion" id="Direccion" />
+        </nz-form-control>
+      </nz-form-item>
+
+      <nz-form-item>
+        <nz-form-label [nzSm]="8" [nzXs]="24" nzRequired nzFor="Telefono">Teléfono</nz-form-label>
+        <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="El campo está incompleto">
+          <input nz-input formControlName="Telefono" id="Telefono" />
+        </nz-form-control>
+      </nz-form-item>
+        
+        <nz-form-item nz-row class="register-area">
+          <nz-form-control [nzSpan]="14" [nzOffset]="8">
+            <button nz-button nzType="primary">Crear persona</button>
+          </nz-form-control>
+        </nz-form-item>
+      </form>
+</div>
