@@ -12,9 +12,16 @@ export class CrearclienteComponent implements OnInit {
   [x: string]: any;
 
   ingresos: Float32Array;
-  Persona: CrearpersonaComponent;
-
-  constructor() { }
+  persona = {
+    nombre: null,
+    apellido: null,
+    correo: null,
+    password: null,
+    cedula: null,
+    direccion: null,
+    telefono: null
+  };
+  constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
   }
@@ -26,12 +33,23 @@ export class CrearclienteComponent implements OnInit {
   };
 
   
-  this.http.post('http://localhost:8080/crearcliente', cliente).subscribe((data: any) => {
+  this.http.post('http://localhost:8080/crearCliente', cliente).subscribe((data: any) => {
     console.log(data);
   }, error => {
     console.error(error);
   });
 
+
   }
 
+  buscarpersona(){
+    this.http.get('http://localhost:8080/obtenerPersona/' + this.cedula  ).subscribe((data:any) => 
+    {console.log(data)
+      this.persona=data 
+      const nombres=this.persona.nombre.split(' ')
+    this.persona.nombre=nombres[0]
+    this.persona.apellido=nombres[1]
+});
+
+}
 }
