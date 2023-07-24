@@ -20,6 +20,12 @@ const routes: Routes = [
   },
   {
     path: 'cliente/buscar', loadChildren:() => import('../app/pages/components/buscar-cliente/buscar-cliente.module').then(m => m.BuscarClienteModule)
+  },
+  {
+    path: 'solicitudcredito', loadChildren:() => import('../app/pages/components/solicitudcredito/solicitudcredito.module').then(m => m.SolicitudcreditoModule)
+  },
+  {
+    path: 'aprobacioncredito', loadChildren:() => import('../app/pages/components/aprobacioncredito/aprobacioncredito.module').then(m => m.AprobacioncreditoModule)
   }
 ];
 

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solicitud Crédito</title>
+  <!-- Agrega aquí los enlaces a los estilos de ng-zorro, bootstrap o CSS personalizados -->
+</head>
+<body>
+  <div class="panel-header panel-header-sm">
+    <!-- Puedes agregar contenido específico para el panel-header aquí -->
+  </div>
+  <div class="main-content">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header">
+            <h5 class="title">Solicitud Crédito</h5>
+          </div>
+          <div class="card-body">
+            <form nz-form>
+              <div class="row">
+                <div class="col-md-4">
+                  <nz-form-item>
+                    <nz-form-label for="idSolicitud">Id Solicitud</nz-form-label>
+                    <input nz-input name="idSolicitud" id="idSolicitud" type="text" placeholder="Id Solicitud">
+                  </nz-form-item>
+                </div>
+                <div class="col-md-4">
+                  <nz-form-item>
+                    <nz-form-label for="monto">Monto</nz-form-label>
+                    <input nz-input name="monto" id="monto" type="number" placeholder="Monto">
+                  </nz-form-item>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <nz-form-item>
+                    <nz-form-label for="cuenta">Cuenta</nz-form-label>
+                    <input nz-input name="cuenta" id="cuenta" type="text" placeholder="Cuenta">
+                  </nz-form-item>
+                </div>
+                <div class="col-md-6">
+                  <nz-form-item>
+                    <nz-form-label for="garantias">Garantías</nz-form-label>
+                    <input nz-input name="garantias" id="garantias" type="text" placeholder="Garantías">
+                  </nz-form-item>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <nz-form-item>
+                    <nz-form-label for="tipoPrestamo">Tipo de Préstamo</nz-form-label>
+                    <nz-select nzAllowClear name="tipoPrestamo" id="tipoPrestamo" class="w-100">
+                      <nz-option nzValue="personal">Préstamo Personal</nz-option>
+                      <nz-option nzValue="hipotecario">Préstamo Hipotecario</nz-option>
+                      <nz-option nzValue="vehicular">Préstamo Vehicular</nz-option>
+                      <!-- Agrega más opciones según tus necesidades -->
+                    </nz-select>
+                  </nz-form-item>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <button nz-button nzType="primary" type="submit">Enviar</button>
+                </div>
+              </div>
+            </form>
+            <div class="row mt-3">
+              <div class="col-md-6">
+                <button nz-button nzType="primary" class="w-100">Consultar Estado</button>
+              </div>
+              <div class="col-md-6">
+                <input nz-input class="w-100" placeholder="Estado de la Solicitud" readonly>
+              </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label for="observaciones">Observaciones</label>
+                    <textarea id="observaciones" name="observaciones" nz-input rows="4" placeholder="Observaciones"></textarea>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

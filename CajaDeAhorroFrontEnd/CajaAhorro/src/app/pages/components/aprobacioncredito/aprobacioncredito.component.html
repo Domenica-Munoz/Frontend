@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solicitud Crédito</title>
+  <!-- Agrega aquí tus estilos CSS o enlaces a librerías externas como Bootstrap o ng-zorro-antd -->
+</head>
+<body>
+  <div class="panel-header panel-header-sm">
+    <!-- Aquí puedes agregar el contenido para el panel-header si lo deseas -->
+  </div>
+  <div class="main-content">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header">
+            <h5 class="title">Aprobacion Credito</h5>
+          </div>
+          <div class="card-body">
+            <form nz-form>
+              <div class="row">
+                <div class="col-md-4 pl-1">
+                  <div class="form-group">
+                    <label for="idSolicitud">Id Solicitud</label>
+                    <input type="text" id="idSolicitud" name="idSolicitud" nz-input placeholder="Id Solicitud">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4 pl-1">
+                  <div class="form-group">
+                    <label for="estado">Estado</label>
+                    <nz-select id="estado" name="estado" class="form-control" nzPlaceHolder="Seleccione una opción">
+                      <nz-option nzValue="aceptar">Aceptar</nz-option>
+                      <nz-option nzValue="denegar">Denegar</nz-option>
+                    </nz-select>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label for="observaciones">Observaciones</label>
+                    <textarea id="observaciones" name="observaciones" nz-input rows="4" placeholder="Observaciones"></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <button type="button" nz-button nzType="primary" >Enviar</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
