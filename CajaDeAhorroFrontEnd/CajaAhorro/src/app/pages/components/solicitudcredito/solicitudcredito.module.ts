@@ -18,12 +18,13 @@ import { NzSelectModule } from 'ng-zorro-antd/select';
   imports: [
     CommonModule,
     RouterModule.forChild([{path: '', component: SolicitudcreditoComponent}]),
+    NzSelectModule,
     NzFormModule,
     NzInputModule,
     FormsModule,
     ReactiveFormsModule,
-    NzButtonModule,
-    NzSelectModule
+    NzButtonModule
+    
   ]
 })
 export class SolicitudcreditoModule { }

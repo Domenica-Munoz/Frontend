@@ -10,6 +10,47 @@
   <div class="panel-header panel-header-sm">
     <!-- Aquí puedes agregar el contenido para el panel-header si lo deseas -->
   </div>
+  <nz-table>
+    <thead>
+        <tr>
+        <th>
+            <p class="h3">ID</p>
+            </th>
+            <th>
+            <p class="h3">Monto</p>
+            </th>
+            <th>
+                <p class="h3">Cuenta</p>
+            </th>
+            <th>
+                <p class="h3">Garantias</p>
+            </th>
+            <th>
+            <p class="h3">Tipo de prestamo</p>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let res of listasolicitud">
+      <td>
+          <p class="h5">{{res.id}}</p>
+      </td>
+      <td>
+          <p class="h5">{{res.monto}}</p>
+      </td>
+      <td>
+      <p class="h5">{{res.cuenta}}</p>
+          </td>
+      <td>
+      <p class ="h5">{{res.garantias}}</p>
+      </td>
+      <td>
+      <p class ="h5">{{res.tipoPrestamo}}</p>
+      </td>
+      </tr>
+  </tbody>
+    
+    </nz-table>
   <div class="main-content">
     <div class="row">
       <div class="col-md-12">
